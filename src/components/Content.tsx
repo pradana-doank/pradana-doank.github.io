@@ -18,8 +18,8 @@ import {
   WrapItem,
 } from '@chakra-ui/react'
 import { BsArrowRight, BsArrowUpRight } from 'react-icons/bs'
-import logo from '../assets/logo.png'
-import programming from '../assets/programming.png'
+import dicoding from '../assets/dicoding.webp'
+import programming from '../assets/programming.webp'
 import InfoText from './InfoText'
 import Statistic from './Statistic'
 
@@ -28,7 +28,7 @@ const Content = () => {
     <Grid templateColumns="repeat(6, 1fr)">
       <GridItem
         colSpan={[6, 6, 3]}
-        bg={`url(${logo}) no-repeat 90% 55%`}
+        bg={`url(${dicoding}) no-repeat 90% 55%`}
         bgSize={100}
         my={10}
       >
