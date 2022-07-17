@@ -20,12 +20,14 @@ import {
 import { BsArrowRight, BsArrowUpRight } from 'react-icons/bs'
 import dicoding from '../assets/dicoding.webp'
 import programming from '../assets/programming.webp'
+import Certificate from './Certificate'
 import InfoText from './InfoText'
+import Project from './Project'
 import Statistic from './Statistic'
 
 const Content = () => {
   return (
-    <Grid templateColumns="repeat(6, 1fr)">
+    <Grid templateColumns="repeat(6, 1fr)" gap={10}>
       <GridItem
         colSpan={[6, 6, 3]}
         bg={`url(${dicoding}) no-repeat 90% 55%`}
@@ -92,8 +94,14 @@ const Content = () => {
           </InputRightElement>
         </InputGroup>
       </GridItem>
-      <GridItem colSpan={6} my={10}>
+      <GridItem colSpan={6}>
         <Statistic />
+      </GridItem>
+      <GridItem colSpan={6}>
+        <Certificate />
+      </GridItem>
+      <GridItem colSpan={6}>
+        <Project />
       </GridItem>
     </Grid>
   )
