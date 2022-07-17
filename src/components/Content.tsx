@@ -18,19 +18,19 @@ import {
   WrapItem,
 } from '@chakra-ui/react'
 import { BsArrowRight, BsArrowUpRight } from 'react-icons/bs'
-import dicoding from '../assets/dicoding.webp'
-import programming from '../assets/programming.webp'
-import Certificate from './Certificate'
 import InfoText from './InfoText'
 import Project from './Project'
 import Statistic from './Statistic'
+import Certificate from './Certificate'
 
 const Content = () => {
   return (
     <Grid templateColumns="repeat(6, 1fr)" gap={10}>
       <GridItem
         colSpan={[6, 6, 3]}
-        bg={`url(${dicoding}) no-repeat 90% 55%`}
+        bg={`url(${
+          import.meta.env.VITE_IMAGEKITIO_URL
+        }/portfolio/dicoding-logo.webp) no-repeat 90% 55%`}
         bgSize={100}
         my={10}
       >
@@ -81,7 +81,11 @@ const Content = () => {
         </VStack>
       </GridItem>
       <GridItem colSpan={[6, 6, 3]}>
-        <Image src={programming} />
+        <Image
+          src={`${
+            import.meta.env.VITE_IMAGEKITIO_URL
+          }/portfolio/programming.webp`}
+        />
         <InputGroup>
           <Input placeholder="Jangan lupa subsbrek, subscrep, shockbreker :v" />
           <InputRightElement>
