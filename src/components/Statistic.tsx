@@ -1,6 +1,9 @@
 import {
   Box,
   Button,
+  Center,
+  Grid,
+  GridItem,
   HStack,
   SimpleGrid,
   Spacer,
@@ -10,8 +13,8 @@ import {
 
 const Statistic = () => {
   return (
-    <SimpleGrid columns={2}>
-      <Box>
+    <SimpleGrid columns={[1, 1, 2]}>
+      <Box textAlign={['center', 'center', 'left']}>
         <Text fontWeight="bold" fontSize="xl">
           Project
         </Text>
@@ -22,42 +25,23 @@ const Statistic = () => {
           Know More
         </Button>
       </Box>
+
       <Box fontWeight="medium">
-        <Wrap>
-          <HStack borderBottom="1px solid black" py={2}>
-            <Text
-              minW={{
-                md: 'xs',
-              }}
-            >
-              Website Application
-            </Text>
-            <Spacer />
-            <Text> 69 </Text>
-          </HStack>
-          <HStack borderBottom="1px solid black" py={2}>
-            <Text
-              minW={{
-                md: 'xs',
-              }}
-            >
-              Android Application
-            </Text>
-            <Spacer />
-            <Text> 69 </Text>
-          </HStack>
-          <HStack borderBottom="1px solid black" py={2}>
-            <Text
-              minW={{
-                md: 'xs',
-              }}
-            >
-              Desktop Application
-            </Text>
-            <Spacer />
-            <Text> 69 </Text>
-          </HStack>
-        </Wrap>
+        <HStack borderBottom="1px solid black" py={2}>
+          <Text minW={{}}>Website Application</Text>
+          <Spacer />
+          <Text> 69 </Text>
+        </HStack>
+        <HStack borderBottom="1px solid black" py={2}>
+          <Text minW={{}}>Android Application</Text>
+          <Spacer />
+          <Text> 69 </Text>
+        </HStack>
+        <HStack borderBottom="1px solid black" py={2}>
+          <Text minW={{}}>Desktop Application</Text>
+          <Spacer />
+          <Text> 69 </Text>
+        </HStack>
       </Box>
     </SimpleGrid>
   )
