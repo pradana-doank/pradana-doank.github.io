@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <Box>
       <Divider my={5} />
-      <Text color="gray" fontSize="sm">
+      <Text color="gray" fontSize="sm" textAlign="center">
         Copyright© 2022 by Pradana Naks Emo :v
       </Text>
     </Box>
