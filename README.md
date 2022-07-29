@@ -3,4 +3,4 @@
 
 Website build with Vite React TS
 
-https://pradana-doank.github.io
+https://pradana.vercel.app
