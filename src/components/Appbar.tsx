@@ -93,7 +93,7 @@ const Appbar = () => {
                     textDecoration: 'underline',
                   }}
                 >
-                  {menu}
+                  {menu.name}
                 </Button>
               ))}
             </DrawerBody>
