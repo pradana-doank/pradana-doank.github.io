@@ -43,7 +43,7 @@ const Content = () => {
                 Fullstack
               </Heading>
             </HStack>
-            <Heading>I'm Pradana</Heading>
+            <Heading>I&apos;m Pradana</Heading>
           </Box>
           <Text fontWeight="medium" maxW={['80%']}>
             Build web, desktop and android for over 1+ years as fullstack gabut

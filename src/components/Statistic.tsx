@@ -1,15 +1,4 @@
-import {
-  Box,
-  Button,
-  Center,
-  Grid,
-  GridItem,
-  HStack,
-  SimpleGrid,
-  Spacer,
-  Text,
-  Wrap,
-} from '@chakra-ui/react'
+import { Box, Button, HStack, SimpleGrid, Spacer, Text } from '@chakra-ui/react'
 
 const Statistic = () => {
   return (

@@ -66,7 +66,7 @@ const Appbar = () => {
           borderRadius={0}
           px={10}
         >
-          Let's chat
+          Let&apos;s chat
         </Button>
         <Box display={['block', 'block', 'none']}>
           <IconButton
