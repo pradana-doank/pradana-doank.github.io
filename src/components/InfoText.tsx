@@ -5,7 +5,8 @@ interface InfoTextProps {
   subtitle: string
 }
 
-const InfoText: React.FC<InfoTextProps> = ({ title, subtitle }) => {
+const InfoText: React.FC<InfoTextProps> = (props: InfoTextProps) => {
+  const { title, subtitle } = props
   return (
     <Box>
       <Heading>{title}</Heading>

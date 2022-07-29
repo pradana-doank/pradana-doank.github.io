@@ -1,11 +1,6 @@
-import { Box, Tag, TagLabel, TagRightIcon, Wrap } from '@chakra-ui/react'
+import { Tag, TagLabel, TagRightIcon, Wrap } from '@chakra-ui/react'
 import { TagType } from '../data/tag'
-import {
-  FaAndroid,
-  FaDesktop,
-  FaJava,
-  FaRegWindowMaximize,
-} from 'react-icons/fa'
+import { FaAndroid, FaDesktop, FaRegWindowMaximize } from 'react-icons/fa'
 import {
   SiDart,
   SiFlutter,
@@ -19,12 +14,13 @@ import {
 import { IconType } from 'react-icons'
 import { FrameworkType } from '../data/tech'
 
-interface ITagBuilder {
+interface TagBuilderProps {
   type: TagType
   framework: FrameworkType
 }
 
-const TagBuilder: React.FC<ITagBuilder> = ({ type, framework }) => {
+const TagBuilder: React.FC<TagBuilderProps> = (props: TagBuilderProps) => {
+  const { type, framework } = props
   const frameworkMapping = (): {
     name: string
     icon: IconType

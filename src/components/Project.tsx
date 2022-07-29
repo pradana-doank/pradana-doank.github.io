@@ -1,12 +1,4 @@
-import {
-  Box,
-  Button,
-  Center,
-  Heading,
-  Image,
-  Text,
-  VStack,
-} from '@chakra-ui/react'
+import { Box, Button, Heading, Image, Text, VStack } from '@chakra-ui/react'
 import { Carousel } from 'react-responsive-carousel'
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
