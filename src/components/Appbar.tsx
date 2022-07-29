@@ -13,9 +13,18 @@ import {
   useDisclosure,
 } from '@chakra-ui/react'
 import { BsMenuButtonWideFill } from 'react-icons/bs'
+import { Link } from 'react-router-dom'
 
 const Appbar = () => {
-  const menus = ['Home', 'Works', 'About', 'Projects']
+  const menus: {
+    name: string
+    path: string
+  }[] = [
+    { name: 'Home', path: '/' },
+    { name: 'Works', path: '/work' },
+    { name: 'About', path: '/about' },
+    { name: 'Projects', path: '/project' },
+  ]
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
@@ -39,7 +48,7 @@ const Appbar = () => {
                 textDecoration: 'underline',
               }}
             >
-              {menu}
+              <Link to={menu.path}>{menu.name}</Link>
             </Button>
           ))}
         </Box>
