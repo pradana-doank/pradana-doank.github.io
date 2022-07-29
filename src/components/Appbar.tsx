@@ -13,9 +13,11 @@ import {
   useDisclosure,
 } from '@chakra-ui/react'
 import { BsMenuButtonWideFill } from 'react-icons/bs'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const Appbar = () => {
+  const navigate = useNavigate()
+
   const menus: {
     name: string
     path: string
@@ -38,6 +40,9 @@ const Appbar = () => {
         <Box display={['none', 'none', 'block']}>
           {menus.map((menu, index) => (
             <Button
+              onClick={() => {
+                navigate(menu.path)
+              }}
               variant="ghost"
               key={index}
               _active={{
@@ -48,7 +53,7 @@ const Appbar = () => {
                 textDecoration: 'underline',
               }}
             >
-              <Link to={menu.path}>{menu.name}</Link>
+              {menu.name}
             </Button>
           ))}
         </Box>

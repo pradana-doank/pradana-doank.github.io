@@ -1,5 +1,4 @@
 import {
-  Box,
   Icon,
   Image,
   Input,
@@ -12,7 +11,7 @@ import {
 import { FaSearch } from 'react-icons/fa'
 import TagBuilder from '../components/TagBuilder'
 import { TagType } from '../data/tag'
-import { FrameworkType, ProgrammingName } from '../data/tech'
+import { FrameworkType } from '../data/tech'
 
 const Work = () => {
   return (
@@ -23,11 +22,11 @@ const Work = () => {
         </InputLeftElement>
         <Input placeholder="Search my project here" />
       </InputGroup>
-      <SimpleGrid columns={3} spacing={10}>
+      <SimpleGrid columns={[1, 2, 3]} spacing={10}>
         {Array.from({ length: 30 }).map((_data, index) => {
           return (
             <VStack key={index} alignItems="flex-start">
-              <Image src="https://picsum.photos/300" zIndex={1} />
+              <Image src="https://picsum.photos/300" boxSize="full" />
               <Text fontSize="xl" fontWeight="medium">
                 Hello World
               </Text>
