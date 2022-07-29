@@ -26,7 +26,7 @@ const Work = () => {
         {Array.from({ length: 30 }).map((_data, index) => {
           return (
             <VStack key={index} alignItems="flex-start">
-              <Image src="https://picsum.photos/300" boxSize="full" />
+              <Image src="https://picsum.photos/300" w="full" />
               <Text fontSize="xl" fontWeight="medium">
                 Hello World
               </Text>
@@ -35,7 +35,7 @@ const Work = () => {
                 sint cillum sint consectetur cupidatat.
               </Text>
               <TagBuilder
-                type={TagType.ANDROID}
+                type={TagType.WEBSITE}
                 framework={FrameworkType.REACT}
               />
             </VStack>

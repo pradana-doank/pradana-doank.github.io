@@ -71,7 +71,7 @@ const TagBuilder: React.FC<ITagBuilder> = ({ type, framework }) => {
       case TagType.ANDROID:
         return [FaAndroid, 'Android', 'whatsapp']
       case TagType.WEBSITE:
-        return [FaRegWindowMaximize, 'Windows', 'linkedin']
+        return [FaRegWindowMaximize, 'Website', 'linkedin']
       case TagType.DESKTOP:
         return [FaDesktop, 'Desktop', '']
     }
