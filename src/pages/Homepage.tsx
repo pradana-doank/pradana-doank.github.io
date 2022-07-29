@@ -10,11 +10,9 @@ const Homepage = () => {
   }, [])
 
   return (
-    <Container maxW="container.lg">
-      <Appbar />
+    <>
       <Content />
-      <Footer />
-    </Container>
+    </>
   )
 }
 

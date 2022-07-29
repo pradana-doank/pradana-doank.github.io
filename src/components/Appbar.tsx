@@ -13,9 +13,20 @@ import {
   useDisclosure,
 } from '@chakra-ui/react'
 import { BsMenuButtonWideFill } from 'react-icons/bs'
+import { useNavigate } from 'react-router-dom'
 
 const Appbar = () => {
-  const menus = ['Home', 'Works', 'About', 'Projects']
+  const navigate = useNavigate()
+
+  const menus: {
+    name: string
+    path: string
+  }[] = [
+    { name: 'Home', path: '/' },
+    { name: 'Works', path: '/work' },
+    { name: 'About', path: '/about' },
+    { name: 'Projects', path: '/project' },
+  ]
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
@@ -29,6 +40,9 @@ const Appbar = () => {
         <Box display={['none', 'none', 'block']}>
           {menus.map((menu, index) => (
             <Button
+              onClick={() => {
+                navigate(menu.path)
+              }}
               variant="ghost"
               key={index}
               _active={{
@@ -39,7 +53,7 @@ const Appbar = () => {
                 textDecoration: 'underline',
               }}
             >
-              {menu}
+              {menu.name}
             </Button>
           ))}
         </Box>
