@@ -1,11 +1,11 @@
-import { ColorProps } from '@chakra-ui/react'
+import { ThemeTypings } from '@chakra-ui/react'
 import { IconType } from 'react-icons'
 import { SiDart, SiJava, SiJavascript, SiTypescript } from 'react-icons/si'
 
 interface IProgrammingMapper {
   icon: IconType
   name: string
-  colorProps: ColorProps
+  colorScheme: ThemeTypings['colorSchemes']
 }
 
 export enum ProgrammingName {
@@ -23,33 +23,25 @@ export function programmingMapper(
       return {
         icon: SiDart,
         name: 'Dart',
-        colorProps: {
-          color: 'blue.400',
-        },
+        colorScheme: 'messenger',
       }
     case ProgrammingName.JAVA:
       return {
         icon: SiJava,
         name: 'Java',
-        colorProps: {
-          color: 'red',
-        },
+        colorScheme: 'red',
       }
     case ProgrammingName.JAVASCRIPT:
       return {
         icon: SiJavascript,
         name: 'Javascript',
-        colorProps: {
-          color: 'yellow',
-        },
+        colorScheme: 'yellow',
       }
     case ProgrammingName.TYPESCRIPT:
       return {
         icon: SiTypescript,
         name: 'Typescript',
-        colorProps: {
-          color: 'blue',
-        },
+        colorScheme: 'blue',
       }
   }
 }

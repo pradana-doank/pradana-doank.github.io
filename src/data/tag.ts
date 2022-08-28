@@ -1,4 +1,4 @@
-import { ColorProps } from '@chakra-ui/react'
+import { ThemeTypings } from '@chakra-ui/react'
 import { IconType } from 'react-icons'
 import { FaDesktop, FaRegWindowMaximize } from 'react-icons/fa'
 import { SiAndroid } from 'react-icons/si'
@@ -6,7 +6,7 @@ import { SiAndroid } from 'react-icons/si'
 interface ITagMapper {
   icon: IconType
   name: string
-  colorProps: ColorProps
+  colorscheme: ThemeTypings['colorSchemes']
 }
 
 export enum TagType {
@@ -21,25 +21,21 @@ export function tagMapper(tag: TagType): ITagMapper {
       return {
         icon: SiAndroid,
         name: 'Android',
-        colorProps: {
-          color: 'whatsapp',
-        },
+        colorscheme: 'whatsapp',
       }
 
     case TagType.WEBSITE:
       return {
         icon: FaRegWindowMaximize,
         name: 'Website',
-        colorProps: { color: 'linkedin' },
+        colorscheme: 'linkedin',
       }
 
     case TagType.DESKTOP:
       return {
         icon: FaDesktop,
         name: 'Desktop',
-        colorProps: {
-          color: '',
-        },
+        colorscheme: 'blackAlpha',
       }
   }
 }

@@ -1,4 +1,4 @@
-import { ColorProps } from '@chakra-ui/react'
+import { ThemeTypings } from '@chakra-ui/react'
 import { IconType } from 'react-icons'
 import { SiFlutter, SiReact, SiSpringboot } from 'react-icons/si'
 
@@ -11,7 +11,7 @@ export enum FrameworkName {
 interface IFrameworkName {
   icon: IconType
   name: string
-  colorProps: ColorProps
+  colorscheme: ThemeTypings['colorSchemes']
 }
 
 export function frameworkMapper(frameworkName: FrameworkName): IFrameworkName {
@@ -20,25 +20,19 @@ export function frameworkMapper(frameworkName: FrameworkName): IFrameworkName {
       return {
         icon: SiReact,
         name: 'React',
-        colorProps: {
-          color: 'blue.100',
-        },
+        colorscheme: 'facebook',
       }
     case FrameworkName.SPRINGBOOT:
       return {
         icon: SiSpringboot,
         name: 'Springboot',
-        colorProps: {
-          color: 'green',
-        },
+        colorscheme: 'whatsapp',
       }
     case FrameworkName.FLUTTER:
       return {
         icon: SiFlutter,
         name: 'Flutter',
-        colorProps: {
-          color: 'lightblue',
-        },
+        colorscheme: 'cyan',
       }
   }
 }

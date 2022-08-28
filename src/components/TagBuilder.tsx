@@ -14,15 +14,15 @@ const TagBuilder: React.FC<TagBuilderProps> = (props: TagBuilderProps) => {
 
   return (
     <Wrap>
-      <Tag color={tagMapper(type).colorProps.color}>
+      <Tag colorScheme={tagMapper(type).colorscheme}>
         <TagLabel>{tagMapper(type).name}</TagLabel>
         <TagRightIcon as={tagMapper(type).icon} />
       </Tag>
-      <Tag color={frameworkMapper(framework).colorProps.color}>
+      <Tag colorScheme={frameworkMapper(framework).colorscheme}>
         <TagLabel>{frameworkMapper(framework).name}</TagLabel>
         <TagRightIcon as={frameworkMapper(framework).icon} />
       </Tag>
-      <Tag color={programmingMapper(programming).colorProps.color}>
+      <Tag colorScheme={programmingMapper(programming).colorScheme}>
         <TagLabel>{programmingMapper(programming).name}</TagLabel>
         <TagRightIcon as={programmingMapper(programming).icon} />
       </Tag>
