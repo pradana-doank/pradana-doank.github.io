@@ -1,98 +1,31 @@
 import { Tag, TagLabel, TagRightIcon, Wrap } from '@chakra-ui/react'
-import { TagType } from '../data/tag'
-import { FaAndroid, FaDesktop, FaRegWindowMaximize } from 'react-icons/fa'
-import {
-  SiDart,
-  SiFlutter,
-  SiJava,
-  SiJavascript,
-  SiKotlin,
-  SiReact,
-  SiSpring,
-  SiTypescript,
-} from 'react-icons/si'
-import { IconType } from 'react-icons'
-import { FrameworkType } from '../data/tech'
+import { frameworkMapper, FrameworkName } from '../data/framework'
+import { programmingMapper, ProgrammingName } from '../data/programming'
+import { tagMapper, TagType } from '../data/tag'
 
 interface TagBuilderProps {
   type: TagType
-  framework: FrameworkType
+  framework: FrameworkName
+  programming: ProgrammingName
 }
 
 const TagBuilder: React.FC<TagBuilderProps> = (props: TagBuilderProps) => {
-  const { type, framework } = props
-  const frameworkMapping = (): {
-    name: string
-    icon: IconType
-    color: string
-    programming: { name: string; icon: IconType; color: string }[]
-  } => {
-    switch (framework) {
-      case FrameworkType.REACT:
-        return {
-          name: 'React',
-          color: 'blue.400',
-          programming: [
-            { name: 'Javascript', icon: SiJavascript, color: 'yellow.300' },
-            { name: 'Typescript', icon: SiTypescript, color: 'blue.700' },
-          ],
-          icon: SiReact,
-        }
-      case FrameworkType.SPRINGBOOT:
-        return {
-          name: 'Springboot',
-          color: 'green.300',
-          programming: [
-            { name: 'Java', icon: SiJava, color: 'red' },
-            { name: 'Kotlin', icon: SiKotlin, color: 'purple.600' },
-          ],
-          icon: SiSpring,
-        }
-      case FrameworkType.FLUTTER:
-        return {
-          name: 'Flutter',
-          color: 'blue.400',
-          programming: [{ name: 'Dart', icon: SiDart, color: 'blue.700' }],
-          icon: SiFlutter,
-        }
-    }
-  }
-
-  const tagMapping = (): [
-    icon: IconType,
-    name: string,
-    colorScheme: string
-  ] => {
-    switch (type) {
-      case TagType.ANDROID:
-        return [FaAndroid, 'Android', 'whatsapp']
-      case TagType.WEBSITE:
-        return [FaRegWindowMaximize, 'Website', 'linkedin']
-      case TagType.DESKTOP:
-        return [FaDesktop, 'Desktop', '']
-    }
-  }
-  const [icon, name, colorScheme] = tagMapping()
-  const programmingLangs = frameworkMapping()
+  const { type, framework, programming } = props
 
   return (
     <Wrap>
-      <Tag colorScheme={colorScheme}>
-        <TagLabel>{name}</TagLabel>
-        <TagRightIcon as={icon} />
+      <Tag color={tagMapper(type).colorProps.color}>
+        <TagLabel>{tagMapper(type).name}</TagLabel>
+        <TagRightIcon as={tagMapper(type).icon} />
       </Tag>
-      <Tag color={programmingLangs.color}>
-        <TagLabel>{programmingLangs.name}</TagLabel>
-        <TagRightIcon as={programmingLangs.icon} />
+      <Tag color={frameworkMapper(framework).colorProps.color}>
+        <TagLabel>{frameworkMapper(framework).name}</TagLabel>
+        <TagRightIcon as={frameworkMapper(framework).icon} />
       </Tag>
-      {programmingLangs.programming.map((pg, index) => {
-        return (
-          <Tag key={index} color={pg.color}>
-            <TagLabel>{pg.name}</TagLabel>
-            <TagRightIcon as={pg.icon} />
-          </Tag>
-        )
-      })}
+      <Tag color={programmingMapper(programming).colorProps.color}>
+        <TagLabel>{programmingMapper(programming).name}</TagLabel>
+        <TagRightIcon as={programmingMapper(programming).icon} />
+      </Tag>
     </Wrap>
   )
 }

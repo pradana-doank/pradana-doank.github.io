@@ -2,7 +2,7 @@ import { Box, Button, HStack, SimpleGrid, Spacer, Text } from '@chakra-ui/react'
 
 const Statistic = () => {
   return (
-    <SimpleGrid columns={[1, 1, 2]}>
+    <SimpleGrid columns={[1, 1, 2]} color="">
       <Box textAlign={['center', 'center', 'left']}>
         <Text fontWeight="bold" fontSize="xl">
           Project

@@ -8,12 +8,18 @@ import {
   Text,
   VStack,
 } from '@chakra-ui/react'
+import { useEffect } from 'react'
 import { FaSearch } from 'react-icons/fa'
 import TagBuilder from '../components/TagBuilder'
+import { FrameworkName } from '../data/framework'
+import { ProgrammingName } from '../data/programming'
 import { TagType } from '../data/tag'
-import { FrameworkType } from '../data/tech'
 
 const Work = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <>
       <InputGroup my={5}>
@@ -36,7 +42,8 @@ const Work = () => {
               </Text>
               <TagBuilder
                 type={TagType.WEBSITE}
-                framework={FrameworkType.REACT}
+                framework={FrameworkName.REACT}
+                programming={ProgrammingName.TYPESCRIPT}
               />
             </VStack>
           )

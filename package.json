@@ -1,5 +1,6 @@
 {
   "name": "my-website",
+  "homepage": "https://pradanar.my.id",
   "private": true,
   "version": "0.0.0",
   "scripts": {
