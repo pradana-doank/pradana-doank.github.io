@@ -2,8 +2,11 @@ import { Box, Button, Heading, Image, Text, VStack } from '@chakra-ui/react'
 import { Carousel } from 'react-responsive-carousel'
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import { useNavigate } from 'react-router-dom'
 
 const Project = () => {
+  const navigate = useNavigate()
+
   const projectImages = ['nefa', 'food-recipe', 'windows']
 
   return (
@@ -69,7 +72,12 @@ const Project = () => {
           )
         })}
       </Carousel>
-      <Button w="100%" colorScheme="yellow" textColor="white">
+      <Button
+        onClick={() => navigate('/work')}
+        w="100%"
+        colorScheme="yellow"
+        textColor="white"
+      >
         Lihat Selengkapnya
       </Button>
     </VStack>

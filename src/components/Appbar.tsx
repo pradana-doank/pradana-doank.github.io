@@ -32,7 +32,9 @@ const Appbar = () => {
   return (
     <Box pt={5}>
       <HStack>
-        <Heading display="inline">Pradana</Heading>
+        <Heading display="inline" onClick={() => navigate('/')}>
+          Pradana
+        </Heading>
         <Heading display="inline" color="pink.200">
           .
         </Heading>
@@ -81,21 +83,24 @@ const Appbar = () => {
           <DrawerOverlay />
           <DrawerContent>
             <DrawerBody>
-              {menus.map((menu, index) => (
-                <Button
-                  variant="ghost"
-                  key={index}
-                  _active={{
-                    backgroundColor: 'transparent',
-                  }}
-                  _hover={{
-                    backgroundColor: 'transparent',
-                    textDecoration: 'underline',
-                  }}
-                >
-                  {menu.name}
-                </Button>
-              ))}
+              <HStack justifyContent="center">
+                {menus.map((menu, index) => (
+                  <Button
+                    variant="ghost"
+                    onClick={() => navigate(menu.path)}
+                    key={index}
+                    _active={{
+                      backgroundColor: 'transparent',
+                    }}
+                    _hover={{
+                      backgroundColor: 'transparent',
+                      textDecoration: 'underline',
+                    }}
+                  >
+                    {menu.name}
+                  </Button>
+                ))}
+              </HStack>
             </DrawerBody>
           </DrawerContent>
         </Drawer>
