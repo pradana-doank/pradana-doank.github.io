@@ -1,10 +1,12 @@
-import { Routes, Route } from 'react-router-dom'
+import { Container } from '@chakra-ui/react'
+import { Route, Routes } from 'react-router-dom'
+import Appbar from './components/Appbar'
+import Footer from './components/Footer'
 import Homepage from './pages/Homepage'
 import NotFound from './pages/NotFound'
 import Work from './pages/Work'
-import Appbar from './components/Appbar'
-import { Container } from '@chakra-ui/react'
-import Footer from './components/Footer'
+
+import './index.css'
 
 const App = () => {
   return (
