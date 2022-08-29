@@ -5,7 +5,7 @@ const Footer = () => {
     <Box>
       <Divider my={5} />
       <Text color="gray" fontSize="sm" textAlign="center">
-        Copyright© 2022 by Pradana Naks Emo :v
+        Copyright© 2022 by Pradana
       </Text>
     </Box>
   )
