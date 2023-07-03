@@ -1,6 +1,7 @@
 import { ThemeTypings } from '@chakra-ui/react'
 import { IconType } from 'react-icons'
 import { SiDart, SiJavascript, SiTypescript } from 'react-icons/si'
+import { FaJava } from 'react-icons/fa'
 
 interface IProgrammingMapper {
   icon: IconType
@@ -27,7 +28,7 @@ export function programmingMapper(
       }
     case ProgrammingName.JAVA:
       return {
-        icon: SiJava,
+        icon: FaJava,
         name: 'Java',
         colorScheme: 'red',
       }
