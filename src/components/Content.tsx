@@ -82,6 +82,7 @@ const Content = () => {
       </GridItem>
       <GridItem colSpan={[6, 6, 3]}>
         <Image
+          w="full"
           src={`${
             import.meta.env.VITE_IMAGEKITIO_URL
           }/portfolio/programming.webp`}

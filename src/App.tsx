@@ -7,6 +7,7 @@ import NotFound from './pages/NotFound'
 import Work from './pages/Work'
 
 import './index.css'
+import About from './pages/About'
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/work" element={<Work />} />
+        <Route path="/about" element={<About />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
