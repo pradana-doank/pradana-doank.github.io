@@ -1,6 +1,3 @@
-[![Build Status](https://app.travis-ci.com/pradana-doank/pradana-doank.github.io.svg?branch=main)](https://app.travis-ci.com/pradana-doank/pradana-doank.github.io)
----
+### Welcome
 
-Website build with Vite React TS
-
-https://pradana.vercel.app
+This is my website is build with Vite + React + TS and MUI CSS
