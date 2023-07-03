@@ -1,6 +1,6 @@
 import { ThemeTypings } from '@chakra-ui/react'
 import { IconType } from 'react-icons'
-import { SiDart, SiJava, SiJavascript, SiTypescript } from 'react-icons/si'
+import { SiDart, SiJavascript, SiTypescript } from 'react-icons/si'
 
 interface IProgrammingMapper {
   icon: IconType
