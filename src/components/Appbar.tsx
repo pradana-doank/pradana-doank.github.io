@@ -23,7 +23,6 @@ const Appbar = () => {
     path: string
   }[] = [
     { name: 'Home', path: '/' },
-    { name: 'Works', path: '/work' },
     { name: 'About', path: '/about' },
     { name: 'Projects', path: '/project' },
   ]
